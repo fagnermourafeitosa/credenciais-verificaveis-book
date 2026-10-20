@@ -2,7 +2,6 @@
 
 **Identidade digital, provas de conhecimento zero e agentes de IA sob controle**
 
-Por **Fagner Moura Feitosa** · Edição de leitura · Outubro de 2026
 
 Como provar que você tem idade suficiente sem revelar sua data de nascimento? Como apresentar um documento digital cuja autenticidade possa ser verificada? E como permitir que um agente de IA aja em seu nome, com permissões limitadas e ações auditáveis?
 
