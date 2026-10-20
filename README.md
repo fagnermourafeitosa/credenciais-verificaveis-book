@@ -9,6 +9,8 @@ Este repositório disponibiliza o livro **Credenciais Verificáveis**, uma jorna
 
 **[Ler o livro em PDF](./credenciais_verificaveis_livro.pdf)** · **[Baixar o PDF](https://github.com/fagnermourafeitosa/credenciais-verificaveis-book/raw/refs/heads/main/credenciais_verificaveis_livro.pdf)**
 
+[![Comprar o livro impresso na UICLAP](https://img.shields.io/badge/Comprar_o_livro_impresso-UICLAP-ac4728?style=for-the-badge)](https://loja.uiclap.com/titulo/ua214620/)
+
 ## Sobre o livro
 
 A obra parte de um problema cotidiano: serviços digitais frequentemente coletam documentos inteiros quando precisam comprovar apenas uma informação. A partir desse cenário, apresenta mecanismos para verificar afirmações, reduzir a exposição de dados e controlar o que pessoas e agentes podem fazer em um sistema.
