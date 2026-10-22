@@ -51,7 +51,7 @@ A parte sobre agentes também examina ID-JAG, COAZ-MCP e Shared Signals, disting
 
 ### Bônus: Predicados sobre SD-JWT VC: um experimento com Longfellow
 
-O estudo apresenta um circuito desenvolvido pelo autor para demonstrar condições sobre atributos ocultos de uma SD-JWT VC, mantendo ECDSA P-256 e SHA-256. Explica as restrições sobre o JWT, a ligação entre circuitos e o reaproveitamento do estado de SHA-256, com trechos de código, testes e medições exploratórias. Também registra as limitações encontradas e o que ainda falta para integrar o experimento a uma carteira.
+O estudo apresenta um circuito desenvolvido pelo autor para demonstrar condições sobre atributos ocultos de uma SD-JWT VC, mantendo ECDSA P-256 e SHA-256. Explica o perfil fechado de JSON, o vínculo das assinaturas entre os circuitos e o reaproveitamento do estado de SHA-256. Também trata do calendário, da expiração e da janela de frescor exigidos pela prova. Discute o custo observado, os limites de interoperabilidade e o que ainda falta para integrar o experimento a uma carteira.
 
 O material de consulta inclui:
 
