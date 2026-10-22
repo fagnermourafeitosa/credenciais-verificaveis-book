@@ -2,10 +2,9 @@
 
 **Identidade digital, provas de conhecimento zero e agentes de IA sob controle**
 
+Maria quer alugar um carro. A locadora precisa conferir a habilitação e a idade mínima. Mais adiante, ela passa a usar um sistema com agentes de IA para pesquisar ofertas e cuidar da reserva. Como reconhecer um documento legítimo, expor menos dados e limitar o que o assistente pode fazer em seu nome?
 
-Como provar que você tem idade suficiente sem revelar sua data de nascimento? Como apresentar um documento digital cuja autenticidade possa ser verificada? E como permitir que um agente de IA aja em seu nome, com permissões limitadas e ações auditáveis?
-
-Este repositório disponibiliza o livro **Credenciais Verificáveis**, uma jornada pelos fundamentos, protocolos e decisões de arquitetura que conectam identidade digital, privacidade e governança de agentes.
+**Credenciais Verificáveis**, de **Fagner Moura**, acompanha esse cenário desde as assinaturas digitais e as cadeias de confiança até as carteiras, os modelos de acesso e a delegação a agentes.
 
 [![Downloads do PDF nas Releases](https://img.shields.io/github/downloads/fagnermourafeitosa/credenciais-verificaveis-book/credenciais_verificaveis_livro.pdf?label=Downloads%20do%20PDF&color=ac4728&displayAssetName=false)](https://github.com/fagnermourafeitosa/credenciais-verificaveis-book/releases)
 
@@ -15,18 +14,20 @@ Este repositório disponibiliza o livro **Credenciais Verificáveis**, uma jorna
 
 ## Sobre o livro
 
-A obra parte de um problema cotidiano: serviços digitais frequentemente coletam documentos inteiros quando precisam comprovar apenas uma informação. A partir desse cenário, apresenta mecanismos para verificar afirmações, reduzir a exposição de dados e controlar o que pessoas e agentes podem fazer em um sistema.
+O ponto de partida é a diferença entre reconhecer uma conta e comprovar um atributo. O livro explica como conferir a origem de um documento, reconhecer a autoridade do emissor e vincular a credencial ao titular. Em seguida, acompanha a emissão por OpenID4VCI e a apresentação por OpenID4VP.
 
-Um exemplo acompanha a leitura: Maria quer alugar um carro em Lisboa. A cada etapa, o cenário evolui da verificação de uma habilitação à comprovação de idade e à delegação da reserva a um agente de IA. Um segundo caso, de comprovação de renda, aprofunda a discussão sobre privacidade e provas de conhecimento zero.
+Na parte dedicada à privacidade, distingue divulgação seletiva de provas de conhecimento zero e examina o que cada abordagem permite ocultar. Um segundo exemplo, sobre comprovação de renda, mostra o problema de entregar o valor exato quando o serviço precisa saber apenas se ele alcança um limite.
 
-O percurso é organizado em seis perguntas de confiança:
+Quando Maria delega essa tarefa, o foco passa às regras de acesso: quais ferramentas o sistema pode chamar, sob quais condições e quando precisa pedir o aceite da titular. OAuth, MCP e AuthZEN entram nesse contexto, junto aos meios de revogar o acesso e auditar as ações executadas.
+
+Seis perguntas orientam a leitura:
 
 - **Integridade:** os dados foram alterados desde que foram assinados?
 - **Autenticidade:** quem assinou os dados e quem os apresenta?
 - **Autoridade:** o emissor tem legitimidade para fazer essa afirmação?
 - **Privacidade:** é possível provar o necessário sem revelar o restante?
-- **Autorização:** a operação é permitida para aquele sujeito, recurso e contexto?
-- **Delegação e governança:** em nome de quem o agente age, com quais limites e sob qual supervisão?
+- **Autorização:** quem pode executar a operação, sobre qual recurso e em que contexto?
+- **Delegação e governança:** quem o agente representa, quais são seus limites e como supervisionar suas ações?
 
 ## Para quem é
 
@@ -36,35 +37,44 @@ A leitura pressupõe familiaridade com HTTP, JSON e login em aplicações web. O
 
 ## Conteúdo
 
-São **13 capítulos em cinco partes**, acompanhados de um glossário e de um mapa de especificações e organizações.
+São **13 capítulos em cinco partes**, um bônus sobre o experimento do autor com Longfellow, dois apêndices e as referências.
 
 | Parte | Capítulos | Temas centrais |
 | --- | --- | --- |
-| I · Identidade, criptografia e confiança | 1 a 3 | Identidade digital, OAuth e OpenID Connect, hashes, assinaturas digitais, certificados e cadeias de confiança. |
-| II · Credenciais verificáveis e carteiras digitais | 4 a 6 | Emissores, titulares e verificadores; formatos de credenciais; emissão, armazenamento e apresentação por carteiras digitais. |
-| III · Provar sem revelar | 7 a 9 | Divulgação seletiva, provas de conhecimento zero e comprovação de atributos com menor exposição de dados. |
-| IV · Autorização e agentes | 10 a 12 | Políticas de acesso, delegação, limites de atuação, aprovação humana, revogação e auditoria de agentes. |
-| V · Juntando as peças | 13 | Integração dos mecanismos em uma jornada completa, estado dos padrões e desafios em aberto. |
+| I · Identidade, criptografia e confiança | 1 a 3 | OAuth e OpenID Connect, hashes, assinaturas digitais, certificados, DIDs e autoridade do emissor. |
+| II · Credenciais verificáveis e carteiras digitais | 4 a 6 | W3C VC, SD-JWT VC e mdoc; vinculação ao titular; emissão e apresentação com OpenID4VCI e OpenID4VP. |
+| III · Provar sem revelar | 7 a 9 | Divulgação seletiva, correlação, predicados, provas de conhecimento zero e Longfellow. |
+| IV · Autorização e agentes | 10 a 12 | RBAC, ReBAC e ABAC; OpenFGA e CEL; OAuth Token Exchange, MCP e AuthZEN; controle por chamada, aprovação humana, revogação e auditoria. |
+| V · A reserva de Maria | 13 | O cenário completo, a comparação com o uso corporativo de agentes, o estado dos padrões e as questões em aberto. |
 
-Entre as tecnologias e especificações discutidas estão **W3C Verifiable Credentials, DIDs, SD-JWT, mdoc, OpenID4VCI, OpenID4VP, DCQL, OpenID Federation, AuthZEN, OAuth Token Exchange e Shared Signals**.
+A parte sobre agentes também examina ID-JAG, COAZ-MCP e Shared Signals, distinguindo as propostas em discussão dos mecanismos já publicados.
 
-> O estado de referência dos padrões descritos é **outubro de 2026**. O livro distingue padrões publicados, implementações experimentais e propostas em discussão. A composição dos mecanismos em uma jornada não implica a existência de um fluxo padronizado de ponta a ponta.
+### Bônus: Predicados sobre SD-JWT VC: um experimento com Longfellow
+
+O estudo apresenta um circuito desenvolvido pelo autor para demonstrar condições sobre atributos ocultos de uma SD-JWT VC, mantendo ECDSA P-256 e SHA-256. Explica as restrições sobre o JWT, a ligação entre circuitos e o reaproveitamento do estado de SHA-256, com trechos de código, testes e medições exploratórias. Também registra as limitações encontradas e o que ainda falta para integrar o experimento a uma carteira.
+
+O material de consulta inclui:
+
+- **Apêndice A: Glossário de termos e siglas**, com definições e remissões aos capítulos.
+- **Apêndice B: Guia de especificações**, organizado por organismo e assunto.
+- **Referências**, com links para os documentos e estudos citados.
+
+O texto distingue padrões publicados, implementações experimentais e propostas em discussão. A reserva de Maria reúne essas peças em um exemplo; o fluxo completo ainda não constitui um padrão único.
 
 ## Como citar
 
 Referência bibliográfica sugerida:
 
-> FEITOSA, Fagner Moura. **Credenciais verificáveis: identidade digital, provas de conhecimento zero e agentes de IA sob controle**. Edição de leitura. out. 2026. Disponível em: https://github.com/fagnermourafeitosa/credenciais-verificaveis-book.
+> MOURA, Fagner. **Credenciais verificáveis: identidade digital, provas de conhecimento zero e agentes de IA sob controle**. 2026. Disponível em: https://github.com/fagnermourafeitosa/credenciais-verificaveis-book.
 
 ### BibTeX
 
 ```bibtex
-@book{feitosa2026credenciais,
-  author   = {Feitosa, Fagner Moura},
+@book{moura2026credenciais,
+  author   = {Moura, Fagner},
   title    = {Credenciais Verificáveis: Identidade digital, provas de conhecimento zero e agentes de IA sob controle},
   year     = {2026},
   month    = oct,
-  edition  = {Edição de leitura},
   language = {Portuguese},
   url      = {https://github.com/fagnermourafeitosa/credenciais-verificaveis-book}
 }
@@ -76,6 +86,10 @@ Encontrou uma imprecisão, um erro de digitação ou um trecho que merece mais c
 
 ## Autor e direitos
 
-**[Fagner Moura Feitosa](https://github.com/fagnermourafeitosa)**
+**[Fagner Moura](https://github.com/fagnermourafeitosa)** é Research Engineer na área de identidade digital. Pesquisa segurança da informação, criptografia, identidade autossoberana (SSI) e blockchain, e costuma resolver seus problemas em Python ou Go.
 
-© 2026 Fagner Moura Feitosa. **Todos os direitos reservados**, conforme indicado no livro. A disponibilização do PDF neste repositório não concede, por si só, licença para reprodução, adaptação ou redistribuição da obra.
+Trabalha no mercado corporativo e de startups desde 1999, com uma trajetória que passa por engenharia de software, segurança de aplicações e inteligência artificial aplicada.
+
+É graduado em Data Science, com extensão pela PUC-Rio e especialização pela Unicamp.
+
+© 2026 Fagner Moura. **Todos os direitos reservados**, conforme indicado no livro. A disponibilização do PDF neste repositório não concede, por si só, licença para reprodução, adaptação ou redistribuição da obra.
