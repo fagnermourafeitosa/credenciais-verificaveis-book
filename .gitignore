@@ -1,0 +1,14 @@
+# Conteudo local do projeto. Publicar somente o README e o PDF do livro.
+/*
+
+# Manter as regras de exclusao no repositorio.
+!/.gitignore
+
+!/README.md
+
+# PDF mais recente, gerado pelo Typst.
+!/edicao-typst/
+/edicao-typst/*
+!/edicao-typst/build/
+/edicao-typst/build/*
+!/edicao-typst/build/livro.pdf
