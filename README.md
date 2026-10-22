@@ -7,7 +7,9 @@ Como provar que você tem idade suficiente sem revelar sua data de nascimento? C
 
 Este repositório disponibiliza o livro **Credenciais Verificáveis**, uma jornada pelos fundamentos, protocolos e decisões de arquitetura que conectam identidade digital, privacidade e governança de agentes.
 
-**[Ler o livro em PDF](./credenciais_verificaveis_livro.pdf)** · **[Baixar o PDF](https://github.com/fagnermourafeitosa/credenciais-verificaveis-book/raw/refs/heads/main/credenciais_verificaveis_livro.pdf)**
+[![Downloads do PDF nas Releases](https://img.shields.io/github/downloads/fagnermourafeitosa/credenciais-verificaveis-book/credenciais_verificaveis_livro.pdf?label=Downloads%20do%20PDF&color=ac4728)](https://github.com/fagnermourafeitosa/credenciais-verificaveis-book/releases)
+
+**[Ler o livro em PDF](./credenciais_verificaveis_livro.pdf)** · **[Baixar o PDF](https://github.com/fagnermourafeitosa/credenciais-verificaveis-book/releases/latest/download/credenciais_verificaveis_livro.pdf)**
 
 [![Comprar o livro impresso na UICLAP](https://img.shields.io/badge/Comprar_o_livro_impresso-UICLAP-ac4728?style=for-the-badge)](https://loja.uiclap.com/titulo/ua214620/)
 
